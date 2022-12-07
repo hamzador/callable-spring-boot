@@ -89,6 +89,8 @@ in the Controller
         for(Future<String> future: futureList){
             future.get();
         }
+	
+		executorService.shutdown();
         long end = System.currentTimeMillis()/1000;
         return "success in : " + (end - start) + " s";
     }
